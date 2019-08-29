@@ -4,6 +4,8 @@ class Ball{
   constructor(x,y,dx,dy){
     this.loc=createVector(x,y);
     this.vel=createVector(dx, dy);
+    this.acc=createVector(0,.1);
+      this.clr = color(random(255), random(255),random(255))
   }
 run(){
   this.checkedges();
@@ -27,13 +29,13 @@ checkedges(){
   }
 
 update(){
-  this.clr = color(random(255), random(255),random(255))
+this.vel.add(this.acc);
 this.loc.add(this.vel)
 }
 render(){
     //this.clr = color(random(255), random(255),random(255))
 fill(this.clr);
-ellipse(this.loc.x, this.loc.y)
+ellipse(this.loc.x, this.loc.y, 11,11)
 //ellipse(this.x, this.y, 50,50)
 }
 
