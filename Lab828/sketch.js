@@ -8,7 +8,7 @@ function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
 background(30,30,30);
-loadBalls(150);
+loadBalls(200);
 
 }
 
@@ -21,7 +21,7 @@ function draw() {
 
 function loadBalls(n){
   for(var i = 0; i < n ; i++){
-    Balls[i] = new Ball(random(width), random(height), random(-8,8), random(-8,8));
+    Balls[i] = new Ball(random(width), random(height), random(-.8,.8), random(-8,8));
 
   }
 }
