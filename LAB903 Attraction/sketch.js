@@ -2,8 +2,8 @@
 // 	8/15/19
 //  This is correct
 
-var Balls=[]
-var mainBall;
+var BallSack=[]
+var bigballs;
 
 function setup() {
   var cnv = createCanvas(800, 800);
@@ -21,13 +21,15 @@ function draw() {
 }
 
 function loadBalls(n){
+  bigballs = new Ball (random(width), random(height), random(-1,1), random(-1,1),-1,50,50);
   for(var i = 0; i < n ; i++){
-    Balls[i] = new Ball(random(width), random(height), random(-.8,.8), random(-8,8));
+    BallSack[i] = new Ball(random(width), random(height), random(-2,2), random(-2,2),i,20,20);
 
   }
 }
 function runBalls(){
-  for(var i =0;i < Balls.length; i++){
-    Balls[i].run();
+  for(var i =0; i < Balls.length; i++){
+    BallSack[i].run();
   }
+  bigballs.run();
 }
