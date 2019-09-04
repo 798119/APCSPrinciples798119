@@ -1,4 +1,3 @@
-//ball.js
 
 class Ball{
   constructor(x,y,dx,dy,id, sizeX, sizeY){
@@ -35,6 +34,7 @@ update(){
   var disttobigballs;
   if(this.id >=0){
   disttobigballs = this.loc.dist(bigballs.loc);
+}
   if(disttobigballs <250){
 
 
@@ -57,6 +57,7 @@ if(disttobigballs<150){
 
 render(){
     this.clr = color(random(255), random(255),random(255))
+
 fill(this.clr);
 ellipse(this.loc.x, this.loc.y, this.sizeX, this.sizeY)
 
