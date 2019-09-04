@@ -32,34 +32,27 @@ checkedges(){
   }
 
 update(){
+this.loc.add(this.vel);
   var disttobigballs;
-  if(this.id >=0){
+  if(this.id >=0)
   disttobigballs = this.loc.dist(bigballs.loc);
   if(disttobigballs <250){
 
 
   this.acc = p5.Vector.sub( bigballs.loc, this.loc);
   this.acc.normalize();
-  this.acc.mult(0.5);
-
-}
-if(disttobigballs<150){
-  this.acc = p5.Vector.sub( bigballs.loc, this.loc);
-  this.acc.normalize();
   this.acc.mult(0.1);
 
 }
 }
-
 //this.vel.add(this.acc);
 //this.loc.add(this.vel)
 
 
 render(){
-    this.clr = color(random(255), random(255),random(255))
+    //this.clr = color(random(255), random(255),random(255))
 fill(this.clr);
 ellipse(this.loc.x, this.loc.y, this.sizeX, this.sizeY)
-
 //ellipse(this.x, this.y, 50,50)
 }
 
