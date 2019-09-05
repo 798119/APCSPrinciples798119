@@ -9,6 +9,7 @@ class Ball{
       this.sizeX=sizeX;
       this.sizeY=sizeY;
 
+
   }
 run(){
   this.checkedges();

@@ -2,7 +2,7 @@
 // 	8/15/19
 //  This is correct
 
-var Ball=[]
+var Balls=[]
 var bigballs;
 
 function setup() {
@@ -16,20 +16,20 @@ loadBalls(200);
 
 function draw() {
   background(30,30,30,20);
-  runBall();
+  runBalls();
 //  runTriangles()
 }
 
 function loadBalls(n){
-  bigballs = new Ball (width/2, height/2, 50,50,50, 50);
+  bigballs = new Ball (width/2, height/2, random(-1,1), random(-1,1) ,-1);
   for(var i = 0; i < n ; i++){
-  bigballs[i] = new Ball(width/2, height/2, 50,50,50, 50);
+  Balls[i] = new Ball(random(width), random(height) 3,3,i);
 
   }
 }
 function runBalls(){
+  bigballs.run();
   for(var i =0; i < Balls.length; i++){
-    bigballs[i].run();
+    Balls[i].run();
   }
-  Ball[i].run();
 }
