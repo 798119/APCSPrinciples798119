@@ -1,5 +1,5 @@
 
-class Ball{
+class Ship{
   constructor(x,y,dx,dy,id, sizeX, sizeY){
     this.loc=createVector(x,y);
     this.vel=createVector(dx, dy);
@@ -60,7 +60,13 @@ render(){
     this.clr = color(random(255), random(255),random(255))
 
 fill(this.clr);
-ellipse(this.loc.x, this.loc.y, this.sizeX, this.sizeY)
+triangle(this.loc.x, this.loc.y, this.sizeX, this.sizeY)
+
+push();
+translate(this.loc.x, this.loc.y);
+rotate(this.angle);
+triangle(-5, 8, 5, 8, 0, -8);
+pop();
 
 //ellipse(this.x, this.y, 50,50)
 }
