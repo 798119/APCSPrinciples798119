@@ -1,17 +1,13 @@
 
 class Ball{
-  constructor(x,y,dx,dy,id, sizeX, sizeY){
-    this.loc=createVector(x,y);
+  constructor(x,y,dx,dy,id){
+    this.loc=createVector(random(width/2),random(height/2));
     this.vel=createVector(dx, dy);
     this.acc=createVector(0,.1);
       this.clr = color(random(255), random(255),random(255))
       this.id=id;
-      this.sizeX=sizeX;
-      this.sizeY=sizeY;
-
-
   }
-run(){
+Run(){
   this.checkedges();
   this.update();
   this.render();
@@ -32,39 +28,29 @@ checkedges(){
   }
 
 update(){
-  var disttobigballs;
-  if(this.id >=0){
-  disttobigballs = this.loc.dist(bigballs.loc);
+//   var disttobigballs;
+//   if(this.id >=0){
+//   disttobigballs = this.loc.dist(bigballs.loc);
+// }
+//   if(disttobigballs <250){
+//
+//
+//   this.acc = p5.Vector.sub( bigballs.loc, this.loc);
+//   this.acc.normalize();
+//   this.acc.mult(0.5);
+//
+// }
+// if(disttobigballs<150){
+//   this.acc = p5.Vector.sub( bigballs.loc, this.loc);
+//   this.acc.normalize();
+//   this.acc.mult(0.1);
+this.vel.add(this.acc);
+this.loc.add(this.vel);
+this.vel.limit(6)
 }
-  if(disttobigballs <250){
-
-
-  this.acc = p5.Vector.sub( bigballs.loc, this.loc);
-  this.acc.normalize();
-  this.acc.mult(0.5);
-
-}
-if(disttobigballs<150){
-  this.acc = p5.Vector.sub( bigballs.loc, this.loc);
-  this.acc.normalize();
-  this.acc.mult(0.1);
-
-}
-}
-
-//this.vel.add(this.acc);
-//this.loc.add(this.vel)
-
 
 render(){
-    this.clr = color(random(255), random(255),random(255))
-
 fill(this.clr);
-ellipse(this.loc.x, this.loc.y, this.sizeX, this.sizeY)
-
-//ellipse(this.x, this.y, 50,50)
+ellipse(this.loc.x, this.loc.y, 50, 50);
+  }
 }
-
-
-}
-//ellipse(this.x, this.y, 50,50)
