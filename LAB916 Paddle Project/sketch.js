@@ -4,7 +4,7 @@
 
 var Balls=[]
 var bigballs;
-
+var gameStart=1
 
 
 function setup() {
@@ -14,7 +14,15 @@ background(30,30,30);
 loadBalls(15);
 
 }
-
+function draw(){
+  if(gameState===1){
+startGame();
+}else if(gameState===2){
+playGame();
+}else if(gameState===3){
+endGame();
+}
+}
 
 function draw() {
   background(30,30,30,207);

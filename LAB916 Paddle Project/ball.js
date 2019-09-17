@@ -4,7 +4,8 @@ class Ball{
   constructor(x,y,dx,dy){
     this.loc=createVector(x,y);
     this.vel=createVector(dx, dy);
-    this.acc=createVector(0,.5);
+    this.acc=createVector(0,.3);
+
       this.clr = color(random(255), random(255),random(255))
   }
 run(){
@@ -24,7 +25,7 @@ checkedges(){
     this.vel.y = -this.vel.y
     }
     if(this.loc.y > height){
-    this.vel.y = -this.vel.y
+    this.vel.y = -1.01*this.vel.y
     }
   }
 
