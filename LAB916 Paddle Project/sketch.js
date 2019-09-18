@@ -5,13 +5,14 @@
 var Balls=[]
 var bigballs;
 var gameStart;
-
+var Paddle;
 
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
 background(30,30,30);
 loadBalls(20);
+loadPaddle();
 
 }
 function draw(){
@@ -27,6 +28,7 @@ endGame();
 function draw() {
   background(30,30,30,207);
   runBalls();
+  runPaddle();
 //  runTriangles()
 }
 
@@ -41,3 +43,10 @@ function runBalls(){
     Balls[i].run();
   }
 }
+  function loadPaddle(){
+    Paddle=new Paddle(30,30)
+
+  }
+  function runPaddle(){
+    Paddle.run();
+  }

@@ -3,16 +3,19 @@
 //  This is correct
 
 class Paddle{
-constructor(x,y,dx,dy){
-
-
+constructor(x,y){
+  this.loc=createVector(x,y)
+this.clr=color(random(255), random(255), random(255))
+// this.w=250
+// this.h=25
 
 }
+run(){
+  this.render();
+}
 
-
-
-
-
-
-
+render(){
+  fill(this.clr)
+  rect(30,30,)
+}
 }
