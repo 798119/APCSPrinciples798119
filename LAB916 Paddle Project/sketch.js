@@ -4,14 +4,14 @@
 
 var Balls=[]
 var bigballs;
-var gameStart=1
+var gameStart;
 
 
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
 background(30,30,30);
-loadBalls(15);
+loadBalls(20);
 
 }
 function draw(){
