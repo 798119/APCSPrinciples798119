@@ -40,10 +40,10 @@ function runBalls(){
     Balls[i].run();
   }
 }
-  function loadPaddle(){
-    Paddle=(30,30);
+  function loadPaddle(n){
+    Paddle()=new paddle(30,30);
 
   }
   function runPaddle(){
-    Paddle.run();
+  Paddle.run();
   }
