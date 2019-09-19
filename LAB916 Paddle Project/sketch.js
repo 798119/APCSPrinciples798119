@@ -4,7 +4,7 @@
 
 var Balls=[]
 var bigballs;
-var gameStart;
+// var gameStart;
 var Paddle;
 
 function setup() {
@@ -16,16 +16,13 @@ loadPaddle();
 
 }
 function draw(){
-  if(gameState===1){
-startGame();
-}else if(gameState===2){
-playGame();
-}else if(gameState===3){
-endGame();
-}
-}
-
-function draw() {
+//   if(gameState===1){
+// startGame();
+// }else if(gameState===2){
+// playGame();
+// }else if(gameState===3){
+// endGame();
+// }
   background(30,30,30,207);
   runBalls();
   runPaddle();
@@ -44,7 +41,7 @@ function runBalls(){
   }
 }
   function loadPaddle(){
-    Paddle=new Paddle(30,30)
+    Paddle=(30,30);
 
   }
   function runPaddle(){

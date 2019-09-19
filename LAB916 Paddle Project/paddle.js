@@ -1,11 +1,11 @@
-//  Calvin Kapral
-// 	9/16/19
-//  This is correct
+ // Calvin Kapral
+	// 9/16/19
+ // This is correct
 
 class Paddle{
 constructor(x,y){
-  this.loc=createVector(x,y)
-this.clr=color(random(255), random(255), random(255))
+  this.loc=createVector(x,y);
+this.clr=color(random(255), random(255), random(255));
 // this.w=250
 // this.h=25
 
@@ -16,6 +16,6 @@ run(){
 
 render(){
   fill(this.clr)
-  rect(30,30,)
+  rect(this.loc.x,this.loc.y,30,30)
 }
 }
