@@ -5,13 +5,13 @@
 var Balls=[]
 var bigballs;
 // var gameStart;
-var Paddle;
+var paddle;
 
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
 background(30,30,30);
-loadBalls(20);
+loadBalls(2);
 loadPaddle();
 
 }
@@ -40,10 +40,10 @@ function runBalls(){
     Balls[i].run();
   }
 }
-  function loadPaddle(n){
-    Paddle()=new paddle(30,30);
+  function loadPaddle(){
+    paddle=new Paddle(500,500);
 
   }
   function runPaddle(){
-  Paddle.run();
+  paddle.run();
   }
