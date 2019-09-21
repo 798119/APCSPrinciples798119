@@ -15,6 +15,7 @@ loadBalls(2);
 loadPaddle();
 
 }
+
 function draw(){
 //   if(gameState===1){
 // startGame();
@@ -35,15 +36,18 @@ function loadBalls(n){
 
   }
 }
+
 function runBalls(){
   for(var i =0;i < Balls.length; i++){
     Balls[i].run();
   }
 }
-  function loadPaddle(){
-    paddle=new Paddle(500,500);
+
+function loadPaddle(){
+  paddle=new Paddle(500,500);
 
   }
-  function runPaddle(){
+
+function runPaddle(){
   paddle.run();
   }

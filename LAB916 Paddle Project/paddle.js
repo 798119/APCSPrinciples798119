@@ -11,6 +11,7 @@ class Paddle{
     // this.h=25
 
   }
+  
   run(){
     this.render();
     this.move();
@@ -20,13 +21,13 @@ class Paddle{
     fill(this.clr)
     rect(this.loc.x,this.loc.y,150,30)
   }
-move(){
-   mouseMoved(){
-
-    if (this.x > 800)
-}
-    this.loc.x = this.loc.x +1;
-    }
+// move(){
+//    mouseMoved(){
+//
+//     if (this.x > 800)
+// }
+//     this.loc.x = this.loc.x +1;
+//     }
 
 
 
