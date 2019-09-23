@@ -16,6 +16,7 @@ class Paddle{
   run(){
     this.render();
     this.update();
+
   }
 
   render(){
@@ -25,6 +26,8 @@ class Paddle{
   update(){
     this.loc.x = lerp(this.loc.x, mouseX-(150/2), .15);
   }
+
+
 
 
 // move(){
