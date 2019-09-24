@@ -24,7 +24,7 @@ function draw(){
 // }else if(gameState===3){
 // endGame();
 // }
-  background(230,230,230,207);
+  background(30,30,30,207);
   runBalls();
   runPaddle();
 //  runTriangles()
