@@ -15,7 +15,7 @@ function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
 background(30,30,30);
-loadBalls(2);
+loadBalls(1);
 loadPaddle();
 
 }
@@ -28,14 +28,14 @@ playGame();
 }else if(gameState===3){
 endGame();
 }
-  background(30,30,30,207);
+  background(255,250,250,207);
   runBalls();
   runPaddle();
 //  runTriangles()
 }
 
 function startGame(){
-  background(40,40,40);
+  background(255,250,250);
   //title
   textSize(60);
   fill(250);
@@ -60,22 +60,21 @@ function startGame(){
     mouseY>600 && mouseY<640){
       mode = "Eazy";
       gameState = 2;
-      this.acc=createVector(.03,.01);
+      this.acc=createVector(.01,.01);
     }
   if(mouseIsPressed &&
     mouseX>350 && mouseX<430 &&
     mouseY>600 && mouseY<640){
       mode = "Medium";
       gameState = 2;
-          this.acc=createVector(.03,.05);
-          loadBalls(3);
+      loadBalls(2);
     }
   if(mouseIsPressed &&
     mouseX>500 && mouseX<580 &&
     mouseY>600 && mouseY<640){
       mode = "Challenge";
       gameState = 2;
-      loadBalls(4)
+      loadBalls(3)
     }
 
 }
@@ -89,6 +88,7 @@ function playGame(){
   text("score = " + score,200,20);
   runBalls();
   runPaddle();
+  endCheckGame();
 }
 //end game scren
 function endGame(){
@@ -123,7 +123,13 @@ function endGame(){
       }
 
 }
+function endCheckGame(){
+  if(lives===0){
+    gameState=3;
 
+  }
+
+}
 
 function loadBalls(n){
   for(var i = 0; i < n ; i++){
