@@ -60,18 +60,22 @@ function startGame(){
     mouseY>600 && mouseY<640){
       mode = "Eazy";
       gameState = 2;
+      this.acc=createVector(.03,.01);
     }
   if(mouseIsPressed &&
     mouseX>350 && mouseX<430 &&
     mouseY>600 && mouseY<640){
       mode = "Medium";
       gameState = 2;
+          this.acc=createVector(.03,.05);
+          loadBalls(3);
     }
   if(mouseIsPressed &&
     mouseX>500 && mouseX<580 &&
     mouseY>600 && mouseY<640){
       mode = "Challenge";
       gameState = 2;
+      loadBalls(4)
     }
 
 }
@@ -131,6 +135,7 @@ function loadBalls(n){
 function runBalls(){
   for(var i =0;i < Balls.length; i++){
     Balls[i].run();
+
   }
 }
 

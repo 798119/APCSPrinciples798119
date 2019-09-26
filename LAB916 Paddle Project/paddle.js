@@ -33,7 +33,7 @@ class Paddle{
    mouseX = 1;
  }
  if (mouseX>= 800){
-    mouseX = 650;
+    mouseX = 600;
 
  }
 

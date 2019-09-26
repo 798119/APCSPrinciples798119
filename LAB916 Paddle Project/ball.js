@@ -4,7 +4,7 @@ class Ball{
   constructor(x,y,dx,dy){
     this.loc=createVector(x,y);
     this.vel=createVector(dx, dy);
-    this.acc=createVector(.03,.3);
+    this.acc=createVector(.01,.03);
     this.dx=random(1,-1);
 
 
@@ -29,6 +29,8 @@ checkedges(){
     }
     if(this.loc.y > height){
     this.vel.y = -1.01*this.vel.y;
+    lives--;
+
     }
   }
 
@@ -45,10 +47,10 @@ ellipse(this.loc.x, this.loc.y, 30,30);
 }
 
 checkhitbox(){
-  if(this.loc.x > paddle.loc.x&& this.loc.x < paddle.loc.x+150
+  if(this.loc.x > paddle.loc.x&& this.loc.x < paddle.loc.x+200
   && this.loc.y > paddle.loc.y&& this.loc.y < paddle.loc.y+30){
     this.vel.y= -this.vel.y;
-
+  score++;
   }
 }
 
