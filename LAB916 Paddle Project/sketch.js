@@ -43,15 +43,15 @@ function startGame(){
   //dificulty setting
   textSize(24);
   fill(0,60,250);
-  rect(200,600,70,40);
+  rect(200,600,80,40);
   fill(255);
   text("Eazy",215,625);
   fill(250,0,250);
-  rect(350,600,70,40);
+  rect(350,600,120,40);
   fill(255);
   text("Medium",365,625);
   fill(255,0,0);
-  rect(500,600,70,40);
+  rect(500,600,145,40);
   fill(255);
   text("Challenge",515,625);
   //dificulty
@@ -60,7 +60,7 @@ function startGame(){
     mouseY>600 && mouseY<640){
       mode = "Eazy";
       gameState = 2;
-      this.acc=createVector(.01,.01);
+      this.acc=createVector(0,.01);
     }
   if(mouseIsPressed &&
     mouseX>350 && mouseX<430 &&
@@ -104,7 +104,7 @@ function endGame(){
   fill(255);
   text("New Game",210,635);
   fill(255,0,0);
-  rect(440,600,80,50);
+  rect(440,600,95,50);
   fill(255);
   text("Quit",450,635);
 
