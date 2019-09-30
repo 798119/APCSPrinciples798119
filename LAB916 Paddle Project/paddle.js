@@ -10,7 +10,7 @@ class Paddle{
     this.clr=color(random(255), random(255), random(255));
     this.w=width;
     this.h=height;
-
+//creating paddle
   }
 
   run(){
@@ -34,7 +34,7 @@ class Paddle{
  }
  if (mouseX>= 700){
     mouseX = 700;
-
+//collision within edge of screen
  }
 
    }

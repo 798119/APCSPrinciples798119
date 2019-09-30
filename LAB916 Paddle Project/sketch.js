@@ -10,17 +10,18 @@ var gameState = 3;
 var mode = "Eazy";
 var lives = 10;
 var score = 0;
-
+//variables within code
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
 background(30,30,30);
 loadBalls(1);
 loadPaddle();
-
+//creating paddle and ball
 }
 
 function draw(){
+  //different difficulty
   if(gameState===1){
 startGame();
 }else if(gameState===2){
@@ -31,7 +32,8 @@ endGame();
   background(255,250,250,207);
   runBalls();
   runPaddle();
-//  runTriangles()
+  //creating paddle
+
 }
 
 function startGame(){
@@ -68,6 +70,7 @@ function startGame(){
       mode = "Medium";
       gameState = 2;
       loadBalls(2);
+      //medium mode
     }
   if(mouseIsPressed &&
     mouseX>500 && mouseX<580 &&
@@ -76,7 +79,7 @@ function startGame(){
       gameState = 2;
       loadBalls(3)
     }
-
+//hard mode
 }
 
 //play game screen
@@ -121,7 +124,7 @@ function endGame(){
         fill(255);
         text("Leave A Review",160,400);
       }
-
+//concusion?
 }
 function endCheckGame(){
   if(lives===0){
@@ -134,22 +137,23 @@ function endCheckGame(){
 function loadBalls(n){
   for(var i = 0; i < n ; i++){
     Balls[i] = new Ball(random(width),0, random(-.8,.8), random(-8,8));
-
+// for loop to load balls
   }
 }
 
 function runBalls(){
   for(var i =0;i < Balls.length; i++){
     Balls[i].run();
-
+//for loop to run balls
   }
 }
 
 function loadPaddle(){
   paddle=new Paddle(500,500, 200,30);
-
+//for loop to load paddle
   }
 
 function runPaddle(){
   paddle.run();
   }
+  //for loop to run paddle

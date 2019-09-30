@@ -6,7 +6,7 @@ class Ball{
     this.vel=createVector(dx, dy);
     this.acc=createVector(.01,.03);
     this.dx=random(-.1,-1);
-
+//creating ball
 
       this.clr = color(random(255), random(255),random(255))
   }
@@ -30,7 +30,7 @@ checkedges(){
     if(this.loc.y > height){
     this.vel.y = -1.01*this.vel.y;
     lives--;
-
+//lives counter
     }
   }
 
@@ -51,6 +51,7 @@ checkhitbox(){
   && this.loc.y > paddle.loc.y&& this.loc.y < paddle.loc.y+30){
     this.vel.y= -this.vel.y;
   score++;
+  //score counter
   }
 }
 
