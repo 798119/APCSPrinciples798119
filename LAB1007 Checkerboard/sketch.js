@@ -19,7 +19,8 @@ for (var i=0; i< squares.length; i++){
 
 }
 function loadsquare(){
- 
+
+ this.clr(255,255,255)
 
 
 }
