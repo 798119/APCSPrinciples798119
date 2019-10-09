@@ -15,3 +15,12 @@ list[a]= list[b];
 list[b]=temp;
 console.log(list)
   }
+function draw(){
+this.list
+
+}
+
+function bubblesort(){
+for(var i=0)
+
+}
