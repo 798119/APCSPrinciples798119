@@ -9,18 +9,14 @@ function setup() {
 background(5,5,5);
 fill(10,10,10);
 }
-function swap(list,a ,b){
-var temp = list[a];
-list[a]= list[b];
-list[b]=temp;
-console.log(list)
-  }
-function draw(){
-this.list
-
-}
-
-function bubblesort(){
-for(var i=0)
-
-}
+for (var i = arr.length; i>=0; i--){
+     for(var j = 1; j<=i; j++){
+       if(arr[j-1]>arr[j]){
+// Swapping Code ++++++++++++++
+           var temp = arr[j-1];
+           arr[j-1] = arr[j];
+           arr[j] = temp;
+        }
+// Swapping Code ++++++++++++++
+     }
+   }
