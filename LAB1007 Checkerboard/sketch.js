@@ -19,3 +19,4 @@ function loadsquare(){
       square[i]= new Square(0, 800, 50)
     }
 }
+for(var i =0; i<sort)
