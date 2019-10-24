@@ -9,6 +9,7 @@ function setup() {
 }
 
 function bubbleSort(array) {
+  var t1= millis();
     const length = array.length;
     for (let i = 0; i < length; i++) {
         for (let j = 0; j < length - 1; j++) {
@@ -16,6 +17,7 @@ function bubbleSort(array) {
                 swap(array, j, j + 1);
             }
         }
+    var t2= millis();
     }
     return array;
 }
