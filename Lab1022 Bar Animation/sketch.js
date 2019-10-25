@@ -54,7 +54,7 @@ function move(){
   for(var i=0; i<bars.length; i++){
     bars[i].set(i);
   }
-  background(50);
+  background(120);
   for(var i=0; i<bars.length; i++){
     bars[i].run();
   }
@@ -75,7 +75,7 @@ function bubblesort(){
 function loadBars(){
   for (var x=0; x<32; x++){
     var w=int(random(1,32));
-    bars[x]= new Bar(25*x,800-(25*w),25,(25*w))
+    bars[x]= new Bar(22*x,800-(22*w),22,(22*w))
   }
 }
 

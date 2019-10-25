@@ -34,10 +34,10 @@ run(){
 
 }
 render(){
-  fill(0,0,255);
+  fill(20,0,255);
   rect(this.loc.x,this.loc.y,this.w,this.h);
 }
 set(i){
-  this.loc.x=i*25;
+  this.loc.x=i*22;
 }
 }
