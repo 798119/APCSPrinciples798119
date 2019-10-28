@@ -48,7 +48,7 @@ function setup(){
 
 function draw(){
 bubblesort();
-framerate(1);
+frameRate(10);
 }
 function move(){
   for(var i=0; i<bars.length; i++){
@@ -60,21 +60,21 @@ function move(){
   }
 }
 function bubblesort(){
-  for (var i=bars.length-1;i>0; i--){
-    for (var j=0; j<i; j++){
+  //for (var i=bars.length-1;i>0; i--){
+    for (var j=0; j<bars.length-1; j++){
       if(bars[j].h>bars[j+1].h){
         swap(bars, j, j+1);
         move();
       }
     }
   }
-}
+//}
 
 
 
 function loadBars(){
-  for (var x=0; x<32; x++){
-    var w=int(random(1,32));
+  for (var x=0; x<36; x++){
+    var w=int(random(1.1,32));
     bars[x]= new Bar(22*x,800-(22*w),22,(22*w))
   }
 }
