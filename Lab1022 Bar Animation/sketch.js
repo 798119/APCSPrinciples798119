@@ -48,7 +48,7 @@ function setup(){
 
 function draw(){
 bubblesort();
-frameRate(10);
+frameRate(5);
 }
 function move(){
   for(var i=0; i<bars.length; i++){
