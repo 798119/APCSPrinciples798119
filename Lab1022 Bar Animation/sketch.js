@@ -37,26 +37,26 @@ var bars=[];
 //put setup code here
 function setup(){
   var cnv=createCanvas(800,800);
-  cnv.position((windowWidth-width)/2,30);
-  background(0);
-  loadBars();
-  frameRate(1);
+    cnv.position((windowWidth-width)/2,30);
+      background(0);
+          loadBars();
+            frameRate(1);
   for(var i=0; i<bars.length; i++){
     bars[i].run();
   }
 }
 
 function draw(){
-bubblesort();
-frameRate(5);
+  bubblesort();
+  frameRate(10);
 }
 function move(){
   for(var i=0; i<bars.length; i++){
     bars[i].set(i);
   }
   background(120);
-  for(var i=0; i<bars.length; i++){
-    bars[i].run();
+    for(var i=0; i<bars.length; i++){
+      bars[i].run();
   }
 }
 function bubblesort(){
@@ -81,6 +81,6 @@ function loadBars(){
 
 function swap(list,a,b){
   var temp=list[a];
-  list[a]=list[b];
-  list[b]=temp;
+    list[a]=list[b];
+      list[b]=temp;
 }
