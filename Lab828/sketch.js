@@ -3,6 +3,9 @@
 //  This is correct
 
 var Balls=[]
+var bigballs;
+
+
 
 function setup() {
   var cnv = createCanvas(800, 800);
