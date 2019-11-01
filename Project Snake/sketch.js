@@ -23,7 +23,7 @@ snake= new Snake(20,20,20,20)
   }
 
   function runFood(){
-
+food.run();
   }
 
   function loadSnake(){
