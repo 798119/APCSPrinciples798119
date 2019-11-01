@@ -1,11 +1,11 @@
 //Calvin Kapral
 //10/31/19
 
-class Snake(){
-  constructor(){
+class Snake{
+  constructor(x,y,h,w){
       this.loc=creaeVector(x,y,h,w);
-      this.clr= color((random(255), random(255), random(255));
-      this.s=25;
+      this.clr= color((random(255), random(255), random(255)));
+      this.s=20;
 
   }
 
@@ -45,12 +45,12 @@ render(){
         this.vel.y = -this.vel.y;
         }
         if(this.loc.y > height){
-        this.vel.y = -1.01*this.vel.y;
+        this.vel.y = this.vel.y;
 
     //lives counter
         }
       }
-  }
+  
 
 
 
