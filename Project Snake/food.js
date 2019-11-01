@@ -9,10 +9,16 @@
     }
 run(){
   this.render();
+  this.update();
 }
 render(){
-  fill(0,100,200)
+  fill(0,0,200)
   rect(this.loc.x,this.loc.y, 20,20)
+}
+
+update(){
+
+
 }
 
 

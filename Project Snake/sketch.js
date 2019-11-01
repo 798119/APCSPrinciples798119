@@ -8,6 +8,7 @@ function setup(){
     cnv.position((windowWidth-width)/2,30);
       background(0);
 
+snake= new Snake(20,20,20,20)
   }
 
   function draw(){
@@ -30,5 +31,5 @@ function setup(){
   }
 
   function runSnake(){
-
+snake.run();
   }

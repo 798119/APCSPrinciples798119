@@ -2,37 +2,54 @@
 //10/31/19
 
 class Snake{
-  constructor(x,y,h,w){
-      this.loc=creaeVector(x,y,h,w);
+  constructor(x,y){
+      this.loc=createVector(x,y);
       this.clr= color((random(255), random(255), random(255)));
       this.s=20;
+      this.vel=createVector(this.s,this.s);
+
 
   }
 
 run(){
   this.render();
   this.move();
-  this.checkedges();
+  // this.checkedges();
+
 }
 
 render(){
-  fill(255,255,0)
+  fill(0,255,0)
   rect(this.loc.x, this.loc.y,20,20)
       }
 
   move(){
-    if(keycode === LEFT_ARROW){
-      this.loc.x = this.loc.x-this.s
+    var smoothDirection
+    if(keyCode === LEFT_ARROW){
+      smoothDirection=1
     }
-    if(keycode === RIGHT_ARROW){
-      this.loc.x = this.loc.x+this.s
+    if(keyCode === RIGHT_ARROW){
+      smoothDirection=2
     }
-    if(keycode === UP_ARROW){
-    this.loc.y === this.loc.y +this.s
+    if(keyCode === UP_ARROW){
+      smoothDirection=3
     }
-    if(keyboard === DOWN_ARROW)
-    this.loc.y === this.loc.y - this.s
-}
+    if(keyCode === DOWN_ARROW){
+      smoothDirection=4
+    }
+    if(smoothDirection===1){
+    this.loc.x=this.loc.x - this.s
+    }
+    if(smoothDirection===2){
+    this.loc.x=this.loc.x +this.s
+    }
+    if(smoothDirection===3){
+    this.loc.y=this.loc.y + this.s
+    }
+    if(smoothDirection===4){
+    this.loc.y=this.loc.y - this.s
+    }
+  }
   checkedges(){
 
       if(this.loc.x <0){
@@ -46,11 +63,11 @@ render(){
         }
         if(this.loc.y > height){
         this.vel.y = this.vel.y;
-
-    //lives counter
-        }
       }
-  
+    //lives counter
+
+      }
+
 
 
 
