@@ -8,11 +8,12 @@ function setup(){
     cnv.position((windowWidth-width)/2,30);
       background(0);
 
-snake= new Snake(20,20,20,20)
+snake= new Snake(20,20,20,20);
+food= new Food(20,20);
   }
 
   function draw(){
-    background (0,0,0)
+    background (0,0,0);
     runFood();
     runSnake();
 
@@ -31,5 +32,5 @@ food.run();
   }
 
   function runSnake(){
-snake.run();
+Snake.run();
   }

@@ -19,8 +19,8 @@ run(){
 }
 
 render(){
-  fill(0,255,0)
-  rect(this.loc.x, this.loc.y,20,20)
+  fill(0,255,0);
+  rect(this.loc.x, this.loc.y,20,20);
       }
 
   move(){
@@ -32,10 +32,10 @@ render(){
       smoothDirection=2
     }
     if(keyCode === UP_ARROW){
-      smoothDirection=3
+      smoothDirection=4
     }
     if(keyCode === DOWN_ARROW){
-      smoothDirection=4
+      smoothDirection=3
     }
     if(smoothDirection===1){
     this.loc.x=this.loc.x - this.s
