@@ -7,6 +7,7 @@ function setup(){
   var cnv=createCanvas(800,800);
     cnv.position((windowWidth-width)/2,30);
       background(0);
+      frameRate(25);
 
 snake= new Snake(20,20,20,20);
 food= new Food(20,20);
@@ -32,5 +33,5 @@ food.run();
   }
 
   function runSnake(){
-Snake.run();
+snake.run();
   }

@@ -3,7 +3,7 @@
 
 
   class Food{
-    constuctor(x,y){
+    constructor(x,y){
       this.loc=createVector(x,y);
 
 

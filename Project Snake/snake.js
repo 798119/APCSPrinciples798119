@@ -7,6 +7,7 @@ class Snake{
       this.clr= color((random(255), random(255), random(255)));
       this.s=20;
       this.vel=createVector(this.s,this.s);
+      this.body=[];
 
 
   }
