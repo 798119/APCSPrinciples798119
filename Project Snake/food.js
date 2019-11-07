@@ -3,8 +3,10 @@
 
 
   class Food{
-    constructor(x,y){
+    constructor(x,y,w,h){
       this.loc=createVector(x,y);
+      this.w=width;
+      this.h=height;
 
 
     }

@@ -70,7 +70,10 @@ render(){
 
       }
 
+ loadSegments(){
 
+   
+ }
 
 
 
