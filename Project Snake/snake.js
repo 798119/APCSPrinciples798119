@@ -15,6 +15,7 @@ class Snake{
 run(){
   this.render();
   this.move();
+  this.checkedges();
   // this.checkedges();
 
 }
