@@ -9,8 +9,9 @@ function setup(){
       background(0);
       frameRate(15);
 
-snake= new Snake(Math.floor(Math.random()*width)*20, Math.floor(Math.random()*height)*20);
-food= new Food(Math.floor(Math.random()*width)*20, Math.floor(Math.random()*height)*20);
+snake = new Snake (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20,20)
+// food= new Food(Math.floor(Math.random((0,40)*20)), Math.floor(Math.random((0,40)*20)));
+food = new Food (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20)
   }
 
   function draw(){
@@ -35,3 +36,4 @@ food.run();
   function runSnake(){
 snake.run();
   }
+t
