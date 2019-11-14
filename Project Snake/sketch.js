@@ -17,6 +17,12 @@ snake = new Snake (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*
 food = new Food (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20)
   }
 
+function draw(){
+  background(0,0,0)
+  runFood();
+  runSnake();
+
+}
 
 
 
@@ -24,7 +30,6 @@ food = new Food (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20
 
 
 
-  }
   function loadFood(){
 
   }
@@ -40,4 +45,8 @@ food.run();
   function runSnake(){
 snake.run();
   }
-}
+
+// timmy julian gavin luke
+// danny minor andrade kevin
+// dylan luis tariq matt
+// dodge dre calvin
