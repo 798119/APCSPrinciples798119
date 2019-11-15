@@ -21,7 +21,13 @@ render(){
 }
 
 update(){
+   if(this.loc.x === snake.loc.x && this.loc.y === snake.loc.y){
+      //  jump to new location
+      this.loc = createVector(Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20);
 
+      //  push segment into snake
+      snake.body.push(createVector(0, 0))
+   }
 
 }
 

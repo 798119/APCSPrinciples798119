@@ -26,6 +26,11 @@ render(){
       }
 
   move(){
+
+    //  traverse the array setting each segment to the location of
+    //  segment before setInterval(function () {
+
+
     var smoothDirection
     if(keyCode === LEFT_ARROW){
       smoothDirection=1
