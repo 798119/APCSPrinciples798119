@@ -7,10 +7,10 @@
 
 
 function setup(){
-  var cnv=createCanvas(80S0,800);
+  var cnv=createCanvas(800,800);
     cnv.position((windowWidth-width)/2,30);
       background(0);
-      frameRate(100);
+      frameRate(15);
 
 snake = new Snake (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20,20)
 // food= new Food(Math.floor(Math.random((0,40)*20)), Math.floor(Math.random((0,40)*20)));
