@@ -45,8 +45,3 @@ food.run();
   function runSnake(){
 snake.run();
   }
-
-// timmy julian gavin luke
-// danny minor andrade kevin
-// dylan luis tariq matt
-// dodge dre calvin
