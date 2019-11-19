@@ -77,6 +77,10 @@ render(){
 
  loadSegments(){
 
+   if(this.loc.x === snake.loc.x && this.loc.y === snake.loc.y){
+     rect(this.loc.x,this.loc.y, 20,20);
+   }
+
 
  }
 

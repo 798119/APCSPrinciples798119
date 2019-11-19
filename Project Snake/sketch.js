@@ -22,6 +22,7 @@ function draw(){
   runFood();
   runSnake();
 
+
 }
 
 
