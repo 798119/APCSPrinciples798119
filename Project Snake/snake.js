@@ -2,12 +2,14 @@
 //10/31/19
 
 class Snake{
-  constructor(x,y){
-      this.loc=createVector(x,y);
+  constructor(x,y,dx,dy,s,clr){
+      this.head=createVector(x,y);
       this.clr= color((random(255), random(255), random(255)));
       this.s=20;
-      this.vel=createVector(this.s,this.s);
+      this.vel=createVector(dx,dy);
       this.body=[];
+
+
 
 
   }
@@ -15,19 +17,27 @@ class Snake{
 run(){
   this.render();
   this.move();
-  this.checkedges();
+  this.update();
+  // this.checkedges();
+
   // this.checkedges();
 
 }
 
 render(){
-  fill(0,255,0);
-  rect(this.loc.x, this.loc.y,20,20);
-      }
+// render head
+fill (0,250,0);
+rect(this.head.x, this.head.y,20,20);
+// render the body
+for(var i = 0; i < this.body.length; i++){
+  rect(this.body[i].x, this.body[i].y, 20,20);
+  }
+}
+
 
   move(){
 
-    //  traverse the array setting each segment to the location of
+    //  traverse the array setting each segment to the headation of
     //  segment before setInterval(function () {
 
 
@@ -45,44 +55,65 @@ render(){
       smoothDirection=3
     }
     if(smoothDirection===1){
-    this.loc.x=this.loc.x - this.s
+    this.head.x=this.head.x - this.s
     }
     if(smoothDirection===2){
-    this.loc.x=this.loc.x +this.s
+    this.head.x=this.head.x +this.s
     }
     if(smoothDirection===3){
-    this.loc.y=this.loc.y + this.s
+    this.head.y=this.head.y + this.s
     }
     if(smoothDirection===4){
-    this.loc.y=this.loc.y - this.s
+    this.head.y=this.head.y - this.s
     }
   }
-  checkedges(){
 
-      if(this.loc.x <0){
-        this.vel.x = -this.vel.x;
+  update(){
+    // update the body
+    for(var i = this.body.length-1; i >= 0; i--){
+      if(i===0){
+        this.body[0].x = this.head.x;
+        this.body[0].y = this.head.y;
         }
-        if(this.loc.x > width){
-        this.vel.x = -this.vel.x;
-        }
-        if(this.loc.y < 0){
-        this.vel.y = -this.vel.y;
-        }
-        if(this.loc.y > height){
-        this.vel.y = this.vel.y;
+      else{
+        this.body[i].x = this.body[i-1].x;
+        this.body[i].y = this.body[i-1].y;
+         }
+       }
+    // update the head
+    this.head.add(this.vel);
+    // add segment
+    if(this.head.x === food.x &&
+      this.head.y === food.y){
+         this.loadSegment();
       }
-    //lives counter
+}
 
-      }
+  // checkedges()
+    //
+    //   if(this.head.x <0){
+    //     this.vel.x = -this.vel.x;
+    //     }
+    //     if(this.head.x > width){
+    //     this.vel.x = -this.vel.x;
+    //     }
+    //     if(this.head.y < 0){
+    //     this.vel.y = -this.vel.y;
+    //     }
+    //     if(this.head.y > height){
+    //     this.vel.y = this.vel.y;
+    //   }
+    // //lives counter
+    //
+    //   }
 
  loadSegments(){
 
-   if(this.loc.x === snake.loc.x && this.loc.y === snake.loc.y){
-     rect(this.loc.x,this.loc.y, 20,20);
+  this.body.push(createVector(-100,-100));
    }
 
 
- }
+
 
 
 
