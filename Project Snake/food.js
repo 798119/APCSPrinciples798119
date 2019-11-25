@@ -17,7 +17,7 @@ run(){
 }
 render(){
   fill(0,0,200);
-  rect(this.head.x,this.head.y, 20,20);
+  rect(this.head.x,this.head.y, 20,20); //food rendering
 }
 
 update(){
@@ -26,9 +26,9 @@ update(){
       this.head = createVector(Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20);
 
       //  push segment into snake
-      snake.body.push(createVector(0, 0));
+      snake.body.push(createVector(this.head.x, this.head.y));
    }
-
+      // randomizes food
 }
 
 

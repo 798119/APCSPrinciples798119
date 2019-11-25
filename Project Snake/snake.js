@@ -18,9 +18,7 @@ run(){
   this.render();
   this.move();
   this.update();
-  // this.checkedges();
-
-  // this.checkedges();
+  this.checkedges();
 
 }
 
@@ -54,18 +52,18 @@ for(var i = 0; i < this.body.length; i++){
     if(keyCode === DOWN_ARROW){
       smoothDirection=3
     }
-    if(smoothDirection===1){
+    if(smoothDirection===1){ //left
     this.head.x=this.head.x - this.s
     }
-    if(smoothDirection===2){
+    if(smoothDirection===2){ //right
     this.head.x=this.head.x +this.s
     }
-    if(smoothDirection===3){
+    if(smoothDirection===3){ //down
     this.head.y=this.head.y + this.s
     }
-    if(smoothDirection===4){
+    if(smoothDirection===4){ //up
     this.head.y=this.head.y - this.s
-    }
+  }
   }
 
   update(){
@@ -85,32 +83,28 @@ for(var i = 0; i < this.body.length; i++){
     // add segment
     if(this.head.x === food.x &&
       this.head.y === food.y){
-         this.loadSegment();
+         this.loadSegment();// lengthens the body
       }
 }
 
-  // checkedges()
-    //
-    //   if(this.head.x <0){
-    //     this.vel.x = -this.vel.x;
-    //     }
-    //     if(this.head.x > width){
-    //     this.vel.x = -this.vel.x;
-    //     }
-    //     if(this.head.y < 0){
-    //     this.vel.y = -this.vel.y;
-    //     }
-    //     if(this.head.y > height){
-    //     this.vel.y = this.vel.y;
-    //   }
-    // //lives counter
-    //
-    //   }
+  checkedges(){
 
- loadSegments(){
+      if(this.head.x <0){
+        gameState = 2 //endgame
+        }
+        if(this.head.x > width){
+        gameState = 2
+        }
+        if(this.head.y < 0){
+        gameState = 2
+        }
+        if(this.head.y > height){
+        gameState = 2
+      }
+    //lives counter
 
-  this.body.push(createVector(-100,-100));
-   }
+  }
+
 
 
 
