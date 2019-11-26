@@ -20,11 +20,27 @@ food = new Food (Math.floor(Math.random()*26)*20,Math.floor(Math.random()*26)*20
 
 function draw(){
   if (gameState ===0){
+    textSize(60);
+    fill(250,100,0);
+    text("SNAKE GAME", 180,50)
+    fill(0,250,0);
+    rect(150,400,20,20);
+    fill(0,0,200);
+    rect(600,400,20,20);
+    textSize(40);
+    fill(50,100,200);
+    text("Click Big Button to Play", 190,260);
     fill(0,60,250);
-    rect(200,600,80,40);
+    rect(350,600,80,80);
+    fill(0,250,0);
+    textSize(20);
+    text("Snake", 130,350);
+    fill(0,0,200);
+    textSize(20);
+    text("Food", 585,350);
     if(mouseIsPressed &&
-      mouseX>200 && mouseX<280 &&
-      mouseY>600 && mouseY<640){
+      mouseX>350 && mouseX<430 &&
+      mouseY>600 && mouseY<680){
         gameState=1;
   }
   }

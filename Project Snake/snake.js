@@ -19,6 +19,8 @@ run(){
   this.move();
   this.update();
   this.checkedges();
+  this.entangle();
+
 
 }
 
@@ -104,6 +106,15 @@ for(var i = 0; i < this.body.length; i++){
     //lives counter
 
   }
+
+    entangle(){
+      for(var i =0; i> this.body.length; i++){
+        if(this.head.x === this.body[i].x &&
+          this.head.y === this.body[i].y){
+           gameState = 2
+         }
+       }
+    }
 
 
 
