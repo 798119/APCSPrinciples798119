@@ -5,6 +5,7 @@ class Button{
     this.h = 40;
     this.clr = createVector(c1,c2,c3);
   }
+  //button parameters
 
   run(){
     // console.log("running");
@@ -28,5 +29,5 @@ class Button{
   render(){
     fill(0,50,250);
     rect(this.loc.x,this.loc.y,this.w,this.h);
-
+//run the buttons
   }
