@@ -60,7 +60,7 @@ function startGame(){
     mouseY>600 && mouseY<640){
       mode = "Eazy";
       gameState = 2;
-      this.acc=createVector(.01,.01);
+    
     }
   if(mouseIsPressed &&
     mouseX>350 && mouseX<430 &&
