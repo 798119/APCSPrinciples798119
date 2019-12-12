@@ -8,14 +8,20 @@ function setup(){
   var cnv=createCanvas(800,800);
     cnv.position((windowWidth-width)/2,30);
       background(0);
-
+      sliderSize = createSlider(0,400,200);
+      sliderSize.position(200,400);
+      sliderColor = createSlider(0,255,110);
+      sliderColor.position(200,450);
 
 }
 
   function draw(){
+    background(0,0,0);
+    fill(sliderColor.value(), 0, 0);
+    ellipse(width/2, height/2, sliderSize.value(), sliderSize.value());
     runShip();
     runPlanet();
-    background(0,0,0);
+
   }
 
   function loadShip(){
