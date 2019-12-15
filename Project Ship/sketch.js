@@ -3,41 +3,30 @@
 
 
 
-
-function setup(){
-  var cnv=createCanvas(800,800);
-    cnv.position((windowWidth-width)/2,30);
-      background(0);
-      sliderSize = createSlider(0,400,200);
-      sliderSize.position(200,400);
-      sliderColor = createSlider(0,255,110);
-      sliderColor.position(200,450);
+var ship;
+var planet;
+function setup() {
+  var cnv = createCanvas(800, 800);
+  cnv.position((windowWidth-width)/2, 30);
+  background(5, 5, 5);
+  fill(200, 30, 150);
+loadObjects();
 
 }
 
-  function draw(){
-    background(0,0,0);
-    fill(sliderColor.value(), 0, 0);
-    ellipse(width/2, height/2, sliderSize.value(), sliderSize.value());
-    runShip();
-    runPlanet();
-
-  }
-
-  function loadShip(){
-    ship=new Ship(500,500, 200,30);
-  //for loop to load paddle
-    }
-
-  function runShip(){
-      ship.run();
+//  The draw function is called @ 30 fps
+function draw() {
+  background(199, 131, 138, );
+  runObjects();
 }
 
-function loadPlanet(){
-  planet=new Planet(500,500, 200,30);
-//for loop to load paddle
-  }
 
-  function runPlanet(){
-      planet.run();
+function loadObjects(){
+  planet = new Planet(random(width/2), random(height/2), random (-.4,.4), random(-.4,.4));
+    ship =new Ship(random(width), random(height), random (-1,1), random(-1,1));
+}
+
+function runObjects(){
+  planet.run();
+    ship.run();
 }
