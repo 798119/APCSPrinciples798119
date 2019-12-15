@@ -1,29 +1,54 @@
-//  Calvin Kapral
-// 	8/15/19
-//  This is correct
+var balls=[];
+
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
-  background(5, 5, 5);
-  fill(200, 40, 150);
+  background(0,0,200);
+  fill(200, 30, 150);
+  loadBalls(20);
+  runBalls();
+  frameRate(5);
 }
 
-function bubbleSort(array) {
-  var t1= millis();
-    const length = array.length;
-    for (let i = 0; i < length; i++) {
-        for (let j = 0; j < length - 1; j++) {
-            if (array[j] > array[j + 1]) {
-                swap(array, j, j + 1);
-            }
-        }
-    var t2= millis();
+//  The draw function is called @ 30 fps
+function draw() {
+  bubbleSort();
+
+}
+
+function loadBalls(n){
+  for (var i =0 ; i < n; i++){
+    var red = random(0,255);
+    balls[i] = new Ball (i*40+20, 400, color(red, 0, 0), red);
+  }
+}
+
+function runBalls(){
+for (var i =0 ; i<balls.length; i++){
+  balls[i].run();
     }
-    return array;
 }
 
-function swap(array, a, b) {
-    const temp = array[a];
-    array[a] = array[b];
-    array[b] = temp;
+function  update(){
+  for(var i=0; i<balls.length; i++){
+    balls[i].set(i);
+  }
+  background(0,0,255);
+  runBalls();
+}
+
+function bubbleSort(){
+
+  for (var j = 0; j < balls.length-1; j++){
+    if (balls[j].getColor()< balls[j+1].getColor()){
+    swap(balls, j, j+1);
+    update();
+    }
+  }
+}
+
+function swap(arr, a, b){ //swap
+    var temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
 }
